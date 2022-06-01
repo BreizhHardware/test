@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Heimdall",
+    "name": "Heimdall",
+    "image": "linuxserver/heimdall",
+    "description": "Heimdall",
+    "categories": [
+      "Oui"
+    ],
+    "platform": "linux",
+    "note": "",
+    "restart_policy": "unless-stopped",
+    "ports": [
+      {
+        "A": "89:80/tcp"
+      },
+      {
+        "B": "444:443/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/config",
+        "bind": "/hconfig"
+      }
+    ],
+    "env": [
+      {
+        "name": "PUID",
+        "default": "1000",
+        "description": "PUID",
+        "label": "PUID"
+      },
+      {
+        "name": "PGID",
+        "default": "1000",
+        "description": "PGID",
+        "label": "PGID"
+      },
+      {
+        "name": "TZ",
+        "default": "Europe/Paris",
+        "description": "TZ",
+        "label": "TZ"
+      }
+    ],
+    "command": [],
+    "devices": [],
+    "labels": [],
+    "sysctls": [],
+    "cap_add": [],
+    "network_mode": "host"
+  }
+]
